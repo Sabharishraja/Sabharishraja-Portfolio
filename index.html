@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <meta name="description" content="Portfolio of Sabharishraja, AI & Data Science Engineer">
+    <link rel="icon" type="image/png" href="images/image.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Advanced Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Three.js Global Neural Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar glassmorphism">
+        <div class="nav-container">
+            <a href="#home" class="logo">Sabharish<span class="accent-text">raja</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h3 class="subtitle gsap-hero">Welcome to my Portfolio</h3>
+            <h1 class="title gsap-hero">Hi, I'm <span class="glow-text">Sabharishraja</span></h1>
+            <h2 class="role typing-text gsap-hero">AI & Data Science Engineer</h2>
+            <p class="description gsap-hero">
+                I build intelligent systems, machine learning models, and data-driven applications that solve complex real-world problems.
+            </p>
+            <div class="btn-group gsap-hero">
+                <a href="#projects" class="btn primary-btn btn-glow">View Projects</a>
+                <a href="#contact" class="btn secondary-btn btn-glow-subtle">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-graphics gsap-hero">
+            <!-- Three.js Neural Sphere Canvas -->
+            <div id="sphere-container" class="sphere-container"></div>
+            
+            <!-- Floating particles layer -->
+            <div class="floating-particles" aria-hidden="true">
+                <div class="particle" style="top: 10%; left: 20%;"></div>
+                <div class="particle" style="top: 80%; left: 80%;"></div>
+                <div class="particle" style="top: 40%; left: 10%;"></div>
+                <div class="particle" style="top: 60%; left: 90%;"></div>
+            </div>
+
+            <div class="profile-container">
+                <div class="profile-glow pulse-anim"></div>
+                <img src="images/abc.png" alt="Sabharishraja" class="profile-img glowing-border lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding gsap-section">
+        <h2 class="section-title">About <span class="accent-text">Me</span></h2>
+        <div class="about-container glass-card">
+            <div class="about-text">
+                <p>Hello! I'm Sabharishraja, an enthusiastic Artificial Intelligence and Data Science student with a profound passion for extracting insights from complex data and building models that learn. I thrive on translating abstract data concepts into tangible, innovative solutions.</p>
+                <p>My journey in tech is driven by an insatiable curiosity and a commitment to continuous learning, constantly exploring the forefront of AI and ML technologies.</p>
+            </div>
+            <div class="counters">
+                <div class="counter-item">
+                    <h3 class="counter glow-text" data-target="15">0</h3>
+                    <p>Projects Built</p>
+                </div>
+                <div class="counter-item">
+                    <h3 class="counter glow-text" data-target="20">0</h3>
+                    <p>Technologies Learned</p>
+                </div>
+                <div class="counter-item">
+                    <h3 class="counter glow-text" data-target="5">0</h3>
+                    <p>AI Domains Explored</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-padding gsap-section">
+        <h2 class="section-title">Technical <span class="accent-text">Skills</span></h2>
+        <div class="skills-grid">
+            
+            <div class="skill-card glass-card hover-glow gsap-skill">
+                <i class="fas fa-code skill-icon"></i>
+                <h3>Programming</h3>
+                <div class="skill-bars-container">
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Python</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>SQL</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Java (OOP basics)</span><span class="skill-percent">30%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="30%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card glass-card hover-glow gsap-skill">
+                <i class="fas fa-brain skill-icon"></i>
+                <h3>Data Analysis & ML</h3>
+                <div class="skill-bars-container">
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Pandas</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>NumPy</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Scikit-learn</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Feature Engineering</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card glass-card hover-glow gsap-skill">
+                <i class="fas fa-chart-pie skill-icon"></i>
+                <h3>Visualization & Tools</h3>
+                <div class="skill-bars-container">
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Power BI</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Matplotlib</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Git</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>GitHub</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card glass-card hover-glow gsap-skill">
+                <i class="fas fa-globe skill-icon"></i>
+                <h3>Web & Deployment</h3>
+                <div class="skill-bars-container">
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>HTML</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>CSS</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>JS</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>React</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card glass-card hover-glow gsap-skill">
+                <i class="fas fa-users skill-icon"></i>
+                <h3>Soft Skills</h3>
+                <div class="skill-bars-container">
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Analytical Thinking</span><span class="skill-percent">60%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="60%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Problem Solving</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Team Collaboration</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Adaptability</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="skill-card glass-card hover-glow gsap-skill">
+                <i class="fas fa-language skill-icon"></i>
+                <h3>Languages</h3>
+                <div class="skill-bars-container">
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>English</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Tamil</span><span class="skill-percent">95%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="95%"></div></div>
+                    </div>
+                    <div class="skill-bar-wrapper">
+                        <div class="skill-info"><span>Hindi basics</span><span class="skill-percent">30%</span></div>
+                        <div class="skill-progress-bg"><div class="skill-progress" data-width="30%"></div></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding gsap-section">
+        <h2 class="section-title">Featured <span class="accent-text">Projects</span></h2>
+        <div class="projects-grid">
+            
+            <!-- Project 1 -->
+            <div class="project-card glass-card gsap-project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                <div class="project-border-glow"></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-robot project-icon"></i>
+                        <h3 class="glow-text">RAG Chatbot</h3>
+                    </div>
+                    <div class="project-image-placeholder">
+                        <div class="neural-bg-pattern"></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span><span>Sentence Transformers</span><span>Qdrant</span><span>Flan-T5</span><span>Streamlit</span>
+                    </div>
+                    
+                    <!-- Expanding Overlay -->
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h4>Description</h4>
+                            <p style="font-size: 0.85rem; margin-bottom: 0.5rem; text-align: left;">Built a fully local Retrieval-Augmented Generation chatbot allowing natural language queries from PDFs utilizing semantic search.</p>
+                            <ul style="text-align: left; margin-bottom: 1rem; padding-left: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+                                <li>100% Offline & Secure</li>
+                                <li>Source-Aware Answers</li>
+                                <li>Efficient Retrieval System</li>
+                                <li>End-to-End AI Pipeline</li>
+                                <li>Lightweight & Deployable</li>
+                            </ul>
+                            <a href="https://github.com/Sabharishraja/RAG-Chatbot.git" target="_blank" rel="noopener noreferrer" class="btn btn-github neon-btn" style="margin-top: 5px;">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card glass-card gsap-project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                <div class="project-border-glow"></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-cloud-sun project-icon"></i>
+                        <h3 class="glow-text">Weather Webapp</h3>
+                    </div>
+                    <div class="project-image-placeholder">
+                        <div class="data-bg-pattern"></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>React</span><span>OpenWeatherMap API</span><span>HTML/CSS</span>
+                    </div>
+                    
+                    <!-- Expanding Overlay -->
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h4>Description</h4>
+                            <p style="font-size: 0.85rem; margin-bottom: 0.5rem; text-align: left;">A responsive React application fetching real-time weather data with a clean, user-friendly interface optimized for performance.</p>
+                            <ul style="text-align: left; margin-bottom: 1rem; padding-left: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+                                <li>Fast API Response</li>
+                                <li>100% Responsive Design</li>
+                                <li>Dynamic Search Functionality</li>
+                                <li>Clean UI/UX</li>
+                                <li>API Integration</li>
+                            </ul>
+                            <a href="https://my-weather-fgbhs674g-sabharishraja-bs-projects.vercel.app/" target="_blank" class="btn btn-github neon-btn" style="margin-top: 5px; color: #22d3ee; border-color: #22d3ee;">
+                                <i class="fas fa-external-link-alt"></i> Try Now
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card glass-card gsap-project" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-glare="true" data-tilt-max-glare="0.3">
+                <div class="project-border-glow"></div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <i class="fas fa-comments project-icon"></i>
+                        <h3 class="glow-text">Feedback Sentiment</h3>
+                    </div>
+                    <div class="project-image-placeholder">
+                        <div class="security-bg-pattern"></div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Databricks</span><span>PySpark</span><span>TextBlob NLP</span><span>Big Data</span>
+                    </div>
+                    
+                    <!-- Expanding Overlay -->
+                    <div class="project-overlay">
+                        <div class="overlay-content">
+                            <h4>Description</h4>
+                            <p style="font-size: 0.85rem; margin-bottom: 0.5rem; text-align: left;">Developed a Databricks sentiment analysis system to process large-scale citizen feedback following Bronze-Silver-Gold arch.</p>
+                            <ul style="text-align: left; margin-bottom: 1rem; padding-left: 1rem; font-size: 0.8rem; color: var(--text-muted);">
+                                <li>Big Data Pipeline Implementation</li>
+                                <li>Databricks Cloud Integration</li>
+                                <li>PySpark Data Processing</li>
+                                <li>Sentiment Analysis via TextBlob</li>
+                                <li>Scalable Data Handling</li>
+                            </ul>
+                            <a href="https://github.com/Sabharishraja/Citizen_feedback_policy_sentiment.git" target="_blank" rel="noopener noreferrer" class="btn btn-github neon-btn" style="margin-top: 5px;">
+                                <i class="fab fa-github"></i> View Source
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding gsap-section">
+        <h2 class="section-title">Get In <span class="accent-text">Touch</span></h2>
+        <div class="contact-container">
+            <div class="contact-info glass-card">
+                <h3 class="glow-text">Let's Connect</h3>
+                <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <div class="social-links">
+                    <a href="https://github.com/Sabharishraja" target="_blank" class="social-icon neon-social" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sabharishraja11/" target="_blank" class="social-icon neon-social" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=sabharishraja11@gmail.com" target="_blank" class="social-icon neon-social" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <form id="contactForm" class="contact-form glass-card">
+                <div class="form-group">
+                    <input type="text" id="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" id="submitBtn" class="btn primary-btn submit-btn btn-glow">
+                    <span id="btnText">Send Message</span>
+                    <span id="loader" style="display:none;">Send Message</span>
+                </button>
+            </form>
+            <p id="successMsg" style="display:none; color:#22d3ee;">Message sent successfully 🚀</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sabharishraja. All rights reserved.</p>
+        <p class="footer-note">Designed with <i class="fas fa-heart accent-text pulse-anim-inline"></i> & <i class="fas fa-coffee accent-text"></i></p>
+    </footer>
+
+    <!-- Scripts -->
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Custom Script (Type module for future ES6 organization if desired, sticking to standard for now) -->
+    <script src="script.js"></script>
+</body>
+</html>
