@@ -862,6 +862,7 @@ footer p {
 #successMsg {
     opacity: 0;
     transition: opacity 0.4s ease;
+    color: var(--secondary-color);
 }
 
 #successMsg.show {
@@ -932,4 +933,15 @@ body, a, button, input, textarea, .project-card, .skill-card {
 .cursor-hidden .custom-cursor,
 .cursor-hidden .custom-cursor-follower {
     opacity: 0;
+}
+
+/* Disable Custom Cursor on Mobile/Touch Devices */
+@media (hover: none) and (pointer: coarse), (max-width: 768px) {
+    body, a, button, input, textarea, .project-card, .skill-card {
+        cursor: auto !important;
+    }
+    .custom-cursor,
+    .custom-cursor-follower {
+        display: none !important;
+    }
 }

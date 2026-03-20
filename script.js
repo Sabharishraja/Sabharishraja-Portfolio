@@ -507,64 +507,7 @@ const initCursor = () => {
     });
 };
 
-// ===== 7. Google Form Submission Integration =====
-const initContactForm = () => {
-    const form = document.querySelector('.contact-form');
-    if (!form) return;
 
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const message = document.getElementById('message').value;
-        
-        const submitBtn = form.querySelector('.submit-btn');
-        const originalText = submitBtn.innerHTML;
-        
-        // Loading State
-        submitBtn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
-        submitBtn.style.opacity = '0.7';
-        submitBtn.style.pointerEvents = 'none';
-
-        // Use no-cors to bypass CORS blocks on Google Forms from fetch
-        fetch('https://docs.google.com/forms/d/e/1FAIpQLSdn3jfpQ-ukfTO5RrDEhfDMeP9smNbTjugXrONIpbCVRw6TQg/formResponse', {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-            },
-            body: new URLSearchParams({
-                'entry.1980929558': name,
-                'entry.1075228691': email,
-                'entry.985277106': message
-            })
-        }).then(() => {
-            // Because it's no-cors, we assume success if no hard network error
-            submitBtn.innerHTML = 'Sent Successfully! <i class="fas fa-check"></i>';
-            submitBtn.style.background = '#10b981'; // Success green
-            form.reset();
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                submitBtn.style.opacity = '1';
-                submitBtn.style.pointerEvents = 'auto';
-            }, 3000);
-        }).catch(error => {
-            console.error('Form submission error:', error);
-            submitBtn.innerHTML = 'Error! Try Again <i class="fas fa-times"></i>';
-            submitBtn.style.background = '#ef4444'; // Error red
-            
-            setTimeout(() => {
-                submitBtn.innerHTML = originalText;
-                submitBtn.style.background = '';
-                submitBtn.style.opacity = '1';
-                submitBtn.style.pointerEvents = 'auto';
-            }, 3000);
-        });
-    });
-};
 
 // Execute everything
 document.addEventListener('DOMContentLoaded', () => {
@@ -577,7 +520,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initTilt();
     initTyping();
     initCursor();
-    initContactForm();
     
     // 3. GSAP (Needs slightly delayed to ensure DOM painted)
     setTimeout(() => {
