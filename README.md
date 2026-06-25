@@ -8,7 +8,7 @@
 
 Welcome to the repository for my personal portfolio website! I am an AI & Data Science Engineer, and this site serves as my digital resume, showcasing my technical skills, projects, and the domains I explore.
 
-Check out the live version here: [Your Live URL Here]
+Check out the live version here: sabharishrajaportfolio.vercel.app
 
 ## Table of Contents
 - [About the Project](#about-the-project)
@@ -74,11 +74,9 @@ You only need a modern web browser to view the site. However, for the best devel
 ## Project Structure
 ```text
 📦 Portfolio_site
- ┣ 📂 images/           # Contains profile placeholder and favicons
- ┣ 📜 index.html        # Main HTML layout
- ┣ 📜 style.css         # Styling, Layouts, CSS Variables
- ┣ 📜 script.js         # GSAP triggers, Three.js scenes, Contact form logic
- ┗ 📜 README.md         # Documentation
+ ┣ images/           # Contains profile placeholder and favicons
+ ┣ index.html        # Main HTML layout
+ ┣ style.css         # Styling, Layouts, CSS Variables
+ ┣ script.js         # GSAP triggers, Three.js scenes, Contact form logic
+ ┗ README.md         # Documentation
 
----
-*If you find this repository helpful or use it as inspiration, feel free to give it a ⭐!*
