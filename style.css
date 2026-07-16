@@ -334,8 +334,8 @@ body {
 }
 
 .profile-img {
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid transparent;
@@ -360,8 +360,8 @@ body {
 
 .profile-glow {
     position: absolute;
-    width: 320px;
-    height: 320px;
+    width: 360px;
+    height: 360px;
     border-radius: 50%;
     background: radial-gradient(circle, var(--primary-color) 0%, transparent 60%);
     opacity: 0.2;
